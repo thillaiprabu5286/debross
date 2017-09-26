@@ -48,7 +48,7 @@ if ( ! function_exists( 'best_business_setup' ) ) :
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'best_business_custom_background_args', array(
-			'default-color' => 'F1F0F0',
+			'default-color' => 'FFFFFF',
 			'default-image' => '',
 		) ) );
 
@@ -58,7 +58,7 @@ if ( ! function_exists( 'best_business_setup' ) ) :
 		// Enable support for custom logo.
 		add_theme_support( 'custom-logo', array(
 			'width'       => 300,
-			'height'      => 150,
+			'height'      => 100,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -203,7 +203,7 @@ function best_business_scripts() {
 
 	wp_enqueue_style( 'jquery-sidr', get_template_directory_uri() . '/vendors/sidr/css/jquery.sidr.dark' . $min . '.css', '', '2.2.1' );
 
-	wp_enqueue_style( 'best-business-style', get_stylesheet_uri(), array(), '1.0.5' );
+	wp_enqueue_style( 'best-business-style', get_stylesheet_uri(), array(), '1.0.6' );
 
 	wp_enqueue_script( 'best-business-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . $min . '.js', array(), '20130115', true );
 
@@ -222,3 +222,16 @@ add_action( 'wp_enqueue_scripts', 'best_business_scripts' );
 
 // Load starting file.
 require_once trailingslashit( get_template_directory() ) . 'includes/start.php';
+
+
+/**
+ * Get site url for links
+ *
+ * @author WPSnacks.com
+ * @link http://www.wpsnacks.com
+ */
+function url_shortcode() {
+    return get_bloginfo('base-url');
+}
+add_shortcode('url','url_shortcode');
+

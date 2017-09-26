@@ -224,9 +224,6 @@ if ( ! function_exists( 'best_business_footer_copyright' ) ) :
 				<?php echo wp_kses_post( $copyright_text ); ?>
 			</div>
 		<?php endif; ?>
-		<div class="site-info">
-			<?php echo esc_html__( 'Best Business by', 'best-business' ) . ' <a target="_blank" rel="designer" href="http://axlethemes.com/">Axle Themes</a>'; ?>
-		</div>
 		<?php
 	}
 

@@ -28,6 +28,9 @@
 	?>
 
 <?php wp_head(); ?>
+    <script>
+        $('.bx-start').addClass('active');
+    </script>
 </head>
 
 <body <?php body_class(); ?>>

@@ -30,7 +30,7 @@ function best_business_customize_register( $wp_customize ) {
 			array(
 				'title'    => esc_html__( 'Best Business Pro', 'best-business' ),
 				'pro_text' => esc_html__( 'Buy Pro', 'best-business' ),
-				'pro_url'  => 'http://axlethemes.com/downloads/best-business-pro/',
+				'pro_url'  => 'https://axlethemes.com/downloads/best-business-pro/',
 				'priority' => 1,
 			)
 		)

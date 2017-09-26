@@ -1,10 +1,10 @@
 /*
 Theme Name: Best Business
-Theme URI: http://axlethemes.com/downloads/best-business/
+Theme URI: https://axlethemes.com/downloads/best-business/
 Author: Axle Themes
-Author URI: http://axlethemes.com/
+Author URI: https://axlethemes.com/
 Description: Best Business is a modern and trendy, useful and resourceful, versatile and flexible, powerful and easy to use and responsive WordPress creative multipurpose website theme. It is a theme that allows everyone to construct an impressive business page, regardless of their skill level. It comes packed with many useful features, and a design that never fails to impress. It is perfect for all sorts of applications and website archetypes, from professional and personal projects to business and corporate endeavors. Regardless of your previous development or coding experience, it delivers sharp, polished results. Personal, corporate, professional and business users alike find this theme an ideal solution for their purpose.
-Version: 1.0.5
+Version: 1.0.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: best-business
@@ -187,6 +187,7 @@ textarea {
     font: inherit;
     margin: 0;
 }
+
 
 button {
     overflow: visible;
@@ -382,7 +383,9 @@ big {
 blockquote, q {
     quotes: "" "";
     padding-left: 15px;
-    border-left: 5px solid #038fd6;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
     display: block;
     margin-bottom: 15px;
 }
@@ -476,7 +479,7 @@ td, th,
 blockquote, q {
     quotes: "" "";
     padding-left: 15px;
-    border-left: 5px solid #179bd7;
+    border-left: 5px solid #d71925;
     display: block;
     margin-bottom: 15px;
 }
@@ -495,7 +498,7 @@ a.button:visited,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    background: #efa046 none repeat scroll 0 0;
+    background: #d71925 none repeat scroll 0 0;
     border: medium none;
     color: #ffffff;
     font-size: 15px;
@@ -512,7 +515,7 @@ a.button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    background-color: #038fd6;
+    background-color: #d71925;
 }
 
 button:focus,
@@ -590,7 +593,7 @@ a.read-more {
 }
 
 a.read-more:hover {
-    border:3px solid #038fd6;
+    border:3px solid #d71925;
 
 }
 
@@ -601,7 +604,7 @@ a.view-more {
     transition: all 0.2s ease 0s;
     display: inline-block;
     margin: 0 5px;
-    background: #038fd6;
+    background: #d71925;
     font-size: 15px;
     margin-top: 25px;
 }
@@ -613,7 +616,7 @@ a.view-more {
 
 a.custom-button,
 a.custom-button:visited {
-    background: #efa046 none repeat scroll 0 0;
+    background: #d71925 none repeat scroll 0 0;
     border-radius: 0;
     color: #ffffff;
     padding: 13px 27px;
@@ -627,20 +630,20 @@ a.custom-button:visited {
 a.custom-button:hover,
 a.custom-button:active,
 a.custom-button:focus {
-    background-color: #038fd6;
+    background-color: #58717d;
     color:#fff;
 }
 
 a.button-secondary,
 a.button-secondary:visited {
-    background: #038fd6;
+    background: #d71925;
     color: #fff;
 }
 
 a.button-secondary:hover,
 a.button-secondary:focus,
 a.button-secondary:active {
-    background: #efa046;
+    background: #58717d;
     color: #fff;
 }
 
@@ -660,7 +663,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-    color: #038fd6;
+    color: #d71925;
 }
 
 a:focus {
@@ -697,8 +700,8 @@ a.comment-reply-link {
 }
 
 #infinite-handle span:hover {
-    border:1px solid #038fd6;
-    background: #038fd6;
+    border:1px solid #d71925;
+    background: #d71925;
     color: #fff;
 }
 
@@ -717,7 +720,7 @@ a.comment-reply-link {
 }
 
 .meta-nav {
-    background: #038fd6 none repeat scroll 0 0;
+    background: #d71925 none repeat scroll 0 0;
     color: #ffffff;
     display: inline-block;
     font-size: 18px;
@@ -739,7 +742,7 @@ a.comment-reply-link {
 
 .post-navigation a:hover,
 .posts-navigation a:hover{
-    color:#038fd6;
+    color:#d71925;
 }
 
 .post-navigation a, .posts-navigation a {
@@ -780,7 +783,7 @@ a.comment-reply-link {
 
 .navigation.pagination .nav-links .page-numbers.current,
 .navigation.pagination .nav-links a.page-numbers:hover {
-    background: #038fd6  none repeat scroll 0 0;
+    background: #d71925  none repeat scroll 0 0;
     color: #ffffff;
 }
 
@@ -916,7 +919,7 @@ a.comment-reply-link {
     display: block;
     height: 3px;
     width: 85px;
-    background-color: #efa046;
+    background-color: #d71925;
     margin: 8px auto 0;
     position: relative;
 }
@@ -927,7 +930,6 @@ a.comment-reply-link {
     color: #949494;
     font-size: 16px;
     font-weight: 400;
-    max-width: 628px;
     margin: 0 auto 40px;
     letter-spacing: 0.5px;
 }
@@ -1227,7 +1229,7 @@ ol.comment-list li {
 }
 
 .comment-reply-title a {
-    color: #038fd6;
+    color: #d71925;
 }
 
 a.comment-reply-link:hover {
@@ -1722,7 +1724,8 @@ object {
 
 /*quick contact*/
 #tophead {
-    background-color: #222;
+    background-color: #efefef;
+    border-bottom: 1px solid #ddd;
     clear: both;
     width: 100%;
 }
@@ -1733,20 +1736,19 @@ object {
 #header-social .best_business_widget_social ul li a::before {
     line-height: 1.5;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.79);
+    color: #313131;
     font-weight: normal;
 }
 
 #header-social .best_business_widget_social li a {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    height: 30px;
-    padding: 5px;
+    height: auto;
     width: 30px;
     border-radius: 100%;
 }
 
 #header-social .best_business_widget_social ul li a:hover::before {
-    color: #fff;
+    color: #d71925;
 }
 
 
@@ -1762,15 +1764,15 @@ object {
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    padding: 30px 0;
+    padding: 10px 0;
 }
 
 .right-head {
     float: right;
     margin-left: 15px;
-    margin-top: 7px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-
 .cart-section {
     float: right;
     position: relative;
@@ -1791,7 +1793,7 @@ a.cart-contents {
     position: absolute;
     top: -12px;
     left: 20px;
-    background: #efa046;
+    background: #d71925;
     color: #fff;
     border-radius: 11px 11px 11px 0;
     min-height: 20px;
@@ -1886,19 +1888,20 @@ a.cart-contents {
 
 #site-identity {
     float: left;
+    margin-top: 20px;
 }
-
 .site-branding a {
     color: #222;
 }
 
 .site-branding a:hover {
-    color: #038fd6;
+    color: #d71925;
 }
 
 .custom-logo-link {
     float: left;
     margin-right: 15px;
+    max-width: 120px;
 }
 
 .custom-logo-link img {
@@ -2088,8 +2091,7 @@ div#mob-menu-quick,
 
 #header-nav li {
     display: inline-block;
-    float: left;
-    margin-bottom: 7px;
+    float: left;;
     position: relative;
 }
 
@@ -2107,7 +2109,7 @@ div#mob-menu-quick,
     position: relative;
     text-transform: capitalize;
     z-index: 99;
-    color: #efefef;
+    color: #313131;
     border-left:1px solid rgba(255, 255, 255, 0.15);
     margin-top: 5px;
 }
@@ -2162,7 +2164,7 @@ div#mob-menu-quick,
 #header-nav li.current-menu-item a,
 #header-nav li.current_page_item a,
 #header-nav li:hover > a {
-    color: #fff;
+    color: #d71925;
 }
 
 #mob-menu2,
@@ -2180,7 +2182,7 @@ div#mob-menu-quick,
 }
 
 #main-nav {
-    background: #038fd6;
+    background: #313131;
 }
 
 .main-navigation ul {
@@ -2441,7 +2443,7 @@ div#mob-menu-quick,
 
 #main-slider .pager-box.cycle-pager-active,
 #main-slider .pager-box:hover {
-    background-color: #038fd6 ;
+    background-color: #d71925 ;
 }
 
 /*Slider cycle next / previous*/
@@ -2463,7 +2465,7 @@ div#mob-menu-quick,
 
 #main-slider .cycle-prev:hover,
 #main-slider .cycle-next:hover {
-    background: #038fd6 none repeat scroll 0 0;
+    background: #d71925 none repeat scroll 0 0;
 }
 
 #main-slider .cycle-prev {
@@ -2509,12 +2511,12 @@ span.divider-button {
 }
 
 #main-slider .slider-buttons a.button-primary {
-    background: #efa046;
+    background: #d71925;
     margin-left: 0;
 }
 
 #main-slider  .slider-buttons a:hover {
-    background: #038fd6;
+    background: #d71925;
     color: #fff;
 }
 
@@ -2548,6 +2550,8 @@ span.divider-button {
 #primary img.best-business-post-thumb {
     vertical-align: middle;
     margin-bottom: 30px;
+    width: 40%;
+    float: left;
 }
 
 /*===========================================================
@@ -2579,6 +2583,7 @@ h1.entry-title {
     border-bottom: 1px solid #f7f5f5;
     margin-bottom: 25px;
     padding-bottom: 15px;
+    clear: both;
 }
 
 #primary .site-main article .entry-title::after {
@@ -2586,7 +2591,7 @@ h1.entry-title {
     display: block;
     width: 65px;
     height: 3px;
-    background-color: #efa046;
+    background-color: #d71925;
     position: absolute;
     bottom: -2px;
 }
@@ -2607,11 +2612,11 @@ h1.entry-title {
     padding-bottom: 15px;
     font-weight: 500;
     position: relative;
-    color: #038fd6;
+    color: #d71925;
 }
 
 .sidebar .widget-title:after {
-    background: #efa046;
+    background: #d71925;
     position: absolute;
     bottom: -2px;
     content: "";
@@ -2681,7 +2686,7 @@ h1.entry-title {
 }
 
 .widget_calendar caption {
-    background: #038fd6 none repeat scroll 0 0;
+    background: #d71925 none repeat scroll 0 0;
     color: #ffffff;
     padding: 5px;
 }
@@ -2692,9 +2697,9 @@ h1.entry-title {
 ===========================================================*/
 
 #colophon {
-    background-color: #2a2a2a;
+    background-color: #efefef;
     clear: both;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(49, 49, 49);
     font-size: 14px;
     padding: 15px 0;
     text-align: center;
@@ -2705,7 +2710,7 @@ h1.entry-title {
 }
 
 #colophon a:hover {
-    color:#efa046;
+    color:#d71925;
 }
 
 #colophon .copyright {
@@ -2723,10 +2728,10 @@ h1.entry-title {
 ===========================================================*/
 
 #footer-widgets {
-    background: #232323;
+    background: #efefef;
     overflow: hidden;
     padding: 50px 0;
-    color: rgba(255, 255, 255, 0.75);
+    color:  rgb(49, 49, 49);
 }
 
 #footer-widgets ul {
@@ -2745,7 +2750,7 @@ h1.entry-title {
 }
 
 #footer-widgets a:hover {
-    color:#efa046;
+    color:#d71925;
 }
 
 #footer-widgets .widget-column {
@@ -2755,7 +2760,7 @@ h1.entry-title {
 }
 
 #footer-widgets a {
-    color:rgba(255, 255, 255, 0.4);
+    color:rgb(49, 49, 49)
 }
 
 #footer-widgets .footer-active-1 {
@@ -2780,14 +2785,14 @@ h1.entry-title {
 }
 
 #footer-widgets .widget-title {
-    color: #ffffff;
+    color: #313131;
     font-weight: 500;
 }
 
 #footer-widgets h3.widget-title::after {
     content: "";
     display: block;
-    background: #038fd6;
+    background: #d71925;
     width: 20%;
     height: 3px;
     margin-top: 10px;
@@ -2861,7 +2866,7 @@ h1.entry-title {
 }
 
 .scrollup:hover {
-    background-color:#efa046;
+    background-color:#d71925;
     color:#fff;
 }
 
@@ -2970,7 +2975,7 @@ div.wpcf7 {
     display: block;
     font-size: 44px;
     position: relative;
-    color: #038fd6;
+    color: #d71925;
 }
 
 .services-layout-1.best_business_widget_services .service-block-inner > a {
@@ -3048,7 +3053,7 @@ div.wpcf7 {
     color: #222;
 }
 .best_business_widget_call_to_action a.button.button-secondary:hover {
-    background-color: #efa046;
+    background-color: #d71925;
     color: #fff;
 }
 .best_business_widget_call_to_action a.button.button-secondary {
@@ -3093,14 +3098,14 @@ div.wpcf7 {
     background-size: cover;
     position: relative;
     z-index: 0;
-    background: #038fd6;
+    background: #3131315;
     padding: 70px 0;
     text-align: center;
 }
 
 #sidebar-front-page-widget-area  .best_business_widget_call_to_action {
     padding: 70px 0;
-
+    background-size: cover;
 }
 
 #sidebar-front-page-widget-area .best_business_widget_call_to_action .widget-title {
@@ -3125,10 +3130,10 @@ div.wpcf7 {
 
 #sidebar-front-page-widget-area .best_business_widget_call_to_action.cta-layout-1 {
     padding: 30px 0 35px;
-    max-width: 1200px;
     margin: 0 auto;
     padding-left: 25px;
     padding-right: 25px;
+    background: #313131;
 }
 #sidebar-front-page-widget-area .best_business_widget_call_to_action.cta-layout-1 .call-to-action-buttons {
     margin-top: 30px;
@@ -3529,7 +3534,7 @@ div.wpcf7 {
 
 .woocommerce #primary .button,
 .woocommerce #review_form #respond .form-submit input {
-    background: #038fd6!important;
+    background: #d71925!important;
     font-weight: normal;
     border-radius: 0;
     color: #fff;
@@ -3537,7 +3542,7 @@ div.wpcf7 {
 
  .woocommerce #primary .button:hover,
  .woocommerce #review_form #respond .form-submit input:hover {
-    background-color: #efa046!important;
+    background-color: #d71925!important;
 }
 
 
@@ -3686,7 +3691,9 @@ div.wpcf7 {
 
 /* Smaller than standard 1024 (devices and browsers) */
 @media only screen and (max-width:1023px) {
-
+    #masthead {
+        padding: 20px 0;
+    }
     h1 {
         font-size: 22px;
     }
@@ -4004,16 +4011,23 @@ div.wpcf7 {
         position: inherit;
         width: 100%;
     }
+
     .widget.best_business_widget_services .service-block-item {
         width: 50%;
     }
+
    .best_business_widget_services .service-col-3 .service-block-item:nth-child(3n+1) {
         clear: none;
     }
-    .custom-logo-link,
-    .site-branding {
+
+    .site-branding,
+    .custom-logo-link{
         float: none;
         margin-right: 0;
+        display: inline-block;
+    }
+    .custom-logo-link {
+        max-width: 200px;
     }
     #site-identity {
         float: none;
@@ -4367,7 +4381,6 @@ div.wpcf7 {
         margin-right: 0;
         text-align: center;
         width: 100%;
-        max-width: inherit;
         margin-bottom: 5px;
     }
     .site-branding {
