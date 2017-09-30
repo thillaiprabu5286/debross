@@ -201,6 +201,10 @@ function best_business_scripts() {
 		wp_enqueue_style( 'best-business-google-fonts', $fonts_url, array(), null );
 	}
 
+    wp_enqueue_style( 'bootstrap.min.css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '1.12.4' );
+    wp_enqueue_style( 'best-business-customize-controls', get_template_directory_uri() . '/css/jquery-ui.css', array(), '1.12.4' );
+    wp_enqueue_script( 'best-business-customize-controls', get_template_directory_uri() . '/js/jquery-ui.js', array( 'jquery', 'customize-controls' ), '1.12.4', true );
+
 	wp_enqueue_style( 'jquery-sidr', get_template_directory_uri() . '/vendors/sidr/css/jquery.sidr.dark' . $min . '.css', '', '2.2.1' );
 
 	wp_enqueue_style( 'best-business-style', get_stylesheet_uri(), array(), '1.0.6' );
@@ -224,14 +228,97 @@ add_action( 'wp_enqueue_scripts', 'best_business_scripts' );
 require_once trailingslashit( get_template_directory() ) . 'includes/start.php';
 
 
-/**
- * Get site url for links
- *
- * @author WPSnacks.com
- * @link http://www.wpsnacks.com
- */
-function url_shortcode() {
-    return get_bloginfo('base-url');
-}
-add_shortcode('url','url_shortcode');
+// Our custom post type function
+function colocation_posttype() {
 
+    register_post_type( 'colocation',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Colocation' ),
+                'singular_name' => __( 'Colocation' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'colocation'),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'colocation_posttype' );
+
+/*
+* Creating a function to create our CPT
+*/
+
+function colocation_post_type() {
+
+// Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'Colocation', 'Post Type General Name', 'twentythirteen' ),
+        'singular_name'       => _x( 'Colocation', 'Post Type Singular Name', 'twentythirteen' ),
+        'menu_name'           => __( 'Colocation', 'twentythirteen' ),
+        'parent_item_colon'   => __( 'Parent Colocation', 'twentythirteen' ),
+        'all_items'           => __( 'All Colocation', 'twentythirteen' ),
+        'view_item'           => __( 'View Colocation', 'twentythirteen' ),
+        'add_new_item'        => __( 'Add New Colocation', 'twentythirteen' ),
+        'add_new'             => __( 'Add New', 'twentythirteen' ),
+        'edit_item'           => __( 'Edit Colocation', 'twentythirteen' ),
+        'update_item'         => __( 'Update Colocation', 'twentythirteen' ),
+        'search_items'        => __( 'Search Colocation', 'twentythirteen' ),
+        'not_found'           => __( 'Not Found', 'twentythirteen' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'twentythirteen' ),
+    );
+
+// Set other options for Custom Post Type
+
+    $args = array(
+        'label'               => __( 'colocation', 'twentythirteen' ),
+        'description'         => __( 'Colocation Packages', 'twentythirteen' ),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array( 'title', 'thumbnail', 'revisions', 'custom-fields', ),
+        // You can associate this CPT with a taxonomy or custom taxonomy.
+        'taxonomies'          => array( 'genres' ),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+    );
+
+    // Registering your Custom Post Type
+    register_post_type( 'colocation', $args );
+
+}
+
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not
+* unnecessarily executed.
+*/
+
+add_action( 'init', 'colocation_post_type', 0 );
+
+function add_my_post_types_to_query( $query ) {
+    if ( is_home() && $query->is_main_query() )
+        $query->set( 'post_type', array( 'post', 'colocation' ) );
+    return $query;
+}
+
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+
+add_action('init', 'my_rem_editor_from_post_type');
+function my_rem_editor_from_post_type() {
+    remove_post_type_support( 'colocation', 'editor' );
+}
