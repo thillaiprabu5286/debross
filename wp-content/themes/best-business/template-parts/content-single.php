@@ -9,7 +9,10 @@
 
 ?>
 
+<div class="row">
+<div class="col-sm-8">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <h1><?php the_title(); ?></h1>
 	<?php
 	/**
 	 * Hook - best_business_single_image.
@@ -39,4 +42,32 @@
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
+</div>
 
+<div class="col-sm-4 sidebar-category-list">
+
+    <h3 class="title">Other Category Post</h3>
+    <span class="divider-left"></span>
+    <?php
+    // the query
+    $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+
+    <?php if ( $wpb_all_query->have_posts() ) : ?>
+
+        <ul class="list-inline">
+
+            <!-- the loop -->
+            <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; ?>
+            <!-- end of the loop -->
+
+        </ul>
+
+        <?php wp_reset_postdata(); ?>
+
+    <?php else : ?>
+        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+    <?php endif; ?>
+</div>
+</div>

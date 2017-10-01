@@ -17,7 +17,13 @@
 get_header(); ?>
 <?php
 $args = array('post_type' => 'colocation', 'posts_per_page' => 30);
-$the_query = new WP_Query($args);
+$the_query = new WP_Query(array(
+    'post_type' => $args,
+    'post_status' => 'publish',
+    'orderby' => 'menu_order',
+    'order' => 'ASC',
+) );
+
 global $post;
 ?>
 <script src="<?php echo get_template_directory_uri() . '/js/jquery-1.12.4.js'; ?>"></script>
@@ -31,13 +37,20 @@ global $post;
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-        We are Providing colocation services in which a business can rent Server , space and other computing hardware
+        <div class="row">
+        <div class="col-sm-1 hidden-xs">&nbsp;</div>
+        <div class="col-sm-10 col-xs-12 colocation-head-section">
+            We are Providing colocation services in which a business can rent Server , space and other computing hardware
         With a capacity of 3MVA, our primary datacentre is situated within an energy efficient enterprise grade ,250 sq.
         ft tier III facility which provides best in class colocation, network connectivity and disaster recovery hub for
         each of our clients.
+        </div>
+        <div class="col-sm-1 hidden-xs">&nbsp;</div>
+        </div>
 
+        <div class="row">
+        <div class="col-sm-1 hidden-xs"></div>
         <div id="tabs" class="col-sm-10 packages-wrap">
-
             <ul>
                 <h1>CHOOSE YOUR COLOCATION SOLUTION</h1>
                 <?php if ($the_query->have_posts()) : ?>
@@ -146,8 +159,8 @@ global $post;
             <?php else: ?>
                 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
             <?php endif; ?>
-            &nbsp;
-
+        </div>
+        <div class="col-sm-1 hidden-xs"></div>
     </main><!-- #main -->
 </div><!-- #primary -->
 

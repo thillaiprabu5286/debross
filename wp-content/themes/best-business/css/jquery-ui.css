@@ -1352,3 +1352,16 @@ a.ui-button:active,
     -webkit-box-shadow: 0px 0px 5px #666666;
     box-shadow: 0px 0px 5px #666666;
 }
+
+@media only screen and (max-width: 780px) {
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active {margin-top: -5px;}
+    .ui-tabs .ui-tabs-nav li {width: 24%;}
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {padding: .9em .2em;}
+    .ui-tabs .ui-tabs-nav .ui-tabs-anchor {font-size: 12px;}
+}
+
+@media only screen and (max-width: 500px) {
+    .ui-tabs .ui-tabs-nav li {width: 49%;}
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active {margin-top: 0px;}
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {padding: .7em .2em;}
+}

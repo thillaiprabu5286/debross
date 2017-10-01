@@ -994,7 +994,7 @@ if ( ! class_exists( 'Best_Business_Services_Widget' ) ) :
 		 * @since 1.0.0
 		 */
 		function __construct() {
-			$this->block_count = 6;
+			$this->block_count = 8;
 
 			$args['id']    = 'best-business-services';
 			$args['label'] = esc_html__( 'BB: Services', 'best-business' );

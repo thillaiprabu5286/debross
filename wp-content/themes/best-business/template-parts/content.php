@@ -9,15 +9,17 @@
 
 ?>
 
+<div class="col-sm-4 col-xs-12 pull-left">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	 <?php if ( has_post_thumbnail() ) : ?>
+	 <div class="post-thumbnail"> <?php if ( has_post_thumbnail() ) : ?>
 		<?php
 		$args = array(
 			'class' => 'best-business-post-thumb aligncenter',
 		);
 		the_post_thumbnail( 'large', $args );
 		?>
+     </div>
 	<?php endif; ?>
 
 	<header class="entry-header">
@@ -54,3 +56,4 @@
 		<?php best_business_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+</div>
