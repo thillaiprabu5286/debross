@@ -322,3 +322,15 @@ add_action('init', 'my_rem_editor_from_post_type');
 function my_rem_editor_from_post_type() {
     remove_post_type_support( 'colocation', 'editor' );
 }
+
+
+/**
+ * Get site url for links
+ *
+ * @author WPSnacks.com
+ * @link http://www.wpsnacks.com
+ */
+function url_shortcode() {
+    return get_bloginfo('site-url');
+}
+add_shortcode('site-url','url_shortcode');

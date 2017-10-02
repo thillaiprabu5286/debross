@@ -665,10 +665,6 @@ a {
     text-decoration: inherit;
 }
 
-a:visited {
-    color: #323232;
-}
-
 a:hover,
 a:focus,
 a:active {
@@ -1839,6 +1835,7 @@ a.cart-contents {
 
 #quick-contact li.quick-email::before {
     content: "\f003";
+    background: #005b88;
 }
 
 #quick-contact li.quick-call::before {
@@ -1847,6 +1844,7 @@ a.cart-contents {
 
 #quick-contact li.quick-address::before {
     content: "\f278";
+    background: #01b1ce;
 }
 
 #quick-contact li::before {
@@ -1864,7 +1862,8 @@ a.cart-contents {
     position: absolute;
     left: -15px;
     top: -5px;
-    background: #f5f5f5;
+    background: #ef5a63;
+    color: #fff;
 }
 
 #quick-contact li strong {
@@ -2225,7 +2224,6 @@ div#mob-menu-quick,
     display: block;
     opacity: 0;
     background-color: #6d6d75;
-    padding: 0 10px 0;
 }
 
 .main-navigation ul li:hover > ul.sub-menu{
@@ -2248,7 +2246,6 @@ div#mob-menu-quick,
     float: left;
     margin-bottom: 0;
     position: relative;
-    padding: 15px 20px;
 }
 
 .main-navigation li li {
@@ -2271,19 +2268,32 @@ div#mob-menu-quick,
     font-size: 15px;
     position: relative;
     z-index: 99;
+    padding: 15px 20px;
+
+    box-shadow: inset 0 0 0 0 #31302B;
+    -webkit-transition: all ease 0.8s;
+    -moz-transition: all ease 0.8s;
+    transition: all ease 0.8s;
 }
 
 .main-navigation ul ul a {
     border-bottom: 1px solid rgba(221, 221, 221, 0.12);
     border-left: medium none;
     border-right: medium none;
+    display: block;
     height: auto;
     text-align: left;
     width: 100%;
     font-size: 14px;
     color: #fff;
     padding: 10px;
+    padding-left: 20px;
+    position: relative;
 
+    box-shadow: inset 0 0 0 0 #31302B;
+    -webkit-transition: all ease 0.8s;
+    -moz-transition: all ease 0.8s;
+    transition: all ease 0.8s;
 }
 
 .main-navigation ul ul li:last-child a {
@@ -2296,8 +2306,8 @@ div#mob-menu-quick,
     margin-left: 10px;
     margin-right: 0;
     position: absolute;
-    right:0;
-    top: 12px;
+    right:7px;
+    top: 25px;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -2320,7 +2330,6 @@ div#mob-menu-quick,
     display: inline-block;
     height: 15px;
     width: 1px;
-    background: rgba(255, 255, 255, 0.25);
     position: absolute;
     left: -20px;
     top: 5px;
@@ -2332,7 +2341,7 @@ div#mob-menu-quick,
 }
 
 .main-navigation ul li.menu-item-has-children a, .main-navigation ul li.page_item_has_children a {
-    padding-right: 15px;
+
 }
 
 .main-navigation li a:hover,
@@ -2340,7 +2349,7 @@ div#mob-menu-quick,
 .main-navigation li.current_page_item > a,
 .main-navigation li:hover > a {
     color: #ffffff;
-    text-decoration: underline;
+    box-shadow: inset 0 100px 0 0 #d71925;
 }
 
 .main-navigation ul ul li a:hover,
@@ -2348,7 +2357,7 @@ div#mob-menu-quick,
 .main-navigation ul ul li.current_page_item a,
 .main-navigation ul ul li:hover > a {
     color: #ffffff;
-    text-decoration: underline;
+    box-shadow: inset 0 100px 0 0 #d71925;
 }
 
 .main-navigation .menu-toggle,
