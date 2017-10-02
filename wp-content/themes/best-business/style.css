@@ -2582,7 +2582,6 @@ span.divider-button {
 #primary img.best-business-post-thumb {
     vertical-align: middle;
     margin-bottom: 30px;
-    float: left;
 }
 
 /*===========================================================
@@ -2735,10 +2734,12 @@ h1.entry-title {
 
 .testimonial-box {border:1px solid #ddd;    padding: 20px;
     background-color: #efefef;
-    box-shadow: 0px 0px 10px #ddd;}
+    box-shadow: 0px 0px 10px #ddd;overflow: hidden;}
 
 .testimonial-box .fa-quote-left {position: relative;top: -5px;}
 .testimonial-box .fa-quote-right {position: relative;bottom: -5px;}
+
+.testimonial-box h5 {line-height: 20px;padding-top: 10px;}
 
 
 /*===========================================================
