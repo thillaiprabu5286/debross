@@ -29,7 +29,7 @@
 
 <?php wp_head(); ?>
     <script>
-        $('.bx-start').addClass('active');
+        jQuery('.bx-start').addClass('active');
     </script>
 </head>
 

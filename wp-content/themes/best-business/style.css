@@ -350,6 +350,19 @@ pre {
     font-family: inherit;
     color: #666;
     font-size: 13px;
+    border: 0px;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #d71925;
+    border-color: #d71925;
+}
+
+.btn-default:hover {
+    color: #fff;
+    background-color: #bb000c;
+    border-color: #d71925;
 }
 
 code,
@@ -2750,6 +2763,16 @@ h1.entry-title {
     display: inline-block;
     margin-left: 5px;
 }
+
+.reveal-off {display: none}
+
+.innerpages-services-box {border: 1px solid #ddd;border-top:0;padding: 20px;margin-bottom: 20px;}
+.innerpages-services-box .collapse-icon {float: right;margin-top: -20px;}
+
+.innerpages-services-image {max-height: 300px;overflow: hidden;}
+.innerpages-services-image img {width: 100%;border: 1px solid #ddd;border-bottom: 0;}
+
+
 /*===========================================================
 **************************** Footer Widgets *****************
 ===========================================================*/

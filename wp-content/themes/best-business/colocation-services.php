@@ -106,7 +106,7 @@ global $post;
                                     <small>From:</small> AED <?php echo get_post_meta($post->ID, "Price", true); ?> P/m
                                 </h3>
                             </div>
-                            <button class="btn btn-lg btn-default" id="myBtn-<?php the_title(); ?>">Get Started With
+                            <button class="btn btn-lg btn-default" id="myBtn-<?php echo $post_slug=$post->post_name; ?>">Get Started With
                                 This
                                 Package
                             </button>
@@ -119,38 +119,36 @@ global $post;
                     </div>
                 </div>
                 <!-- The Modal -->
-                <div id="myModal-<?php the_title(); ?>" class="modal">
+                <div id="myModal-<?php echo $post_slug=$post->post_name; ?>" class="modal">
                     <!-- Modal content -->
                     <div class="modal-content">
-                        <span class="close">&times;</span>
+                        <span class="close close-<?php echo $post_slug=$post->post_name; ?>">&times;</span>
+                        <h2 class="form-signin-heading">Let's get your service configured</h2>
+                        So, it looks like you selected the <strong><?php the_title(); ?> services</strong>.
+                        To get started please leave your detail here and one of our representative will contact you soon to discuss further.
+                        <hr />
                         <?php echo do_shortcode("[contact-form-7 id=\"606\" title=\"Colocation Packages\"]"); ?>
                     </div>
 
                 </div>
                 <script>
-                    // Get the modal
-                    var modal = document.getElementById('myModal-<?php the_title(); ?>');
-
-                    // Get the button that opens the modal
-                    var btn = document.getElementById('myBtn-<?php the_title(); ?>');
-
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName('close');
 
                     // When the user clicks on the button, open the modal
-                    btn.onclick = function () {
-                        modal.style.display = "block";
-                    }
+                    jQuery('#myBtn-<?php echo $post_slug=$post->post_name; ?>').click(function () {
+                        jQuery('#myModal-<?php echo $post_slug=$post->post_name; ?>').css('display', 'block');
+                    });
 
                     // When the user clicks on <span> (x), close the modal
-                    span.onclick = function () {
-                        modal.style.display = "none";
-                    }
+                    jQuery('.close-<?php echo $post_slug=$post->post_name; ?>').click(function () {
+                        jQuery('#myModal-<?php echo $post_slug=$post->post_name; ?>').css('display', 'none');
+                    });
 
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function (event) {
                         if (event.target == modal) {
-                            modal.style.display = "none";
+                            jQuery('#myModal-<?php echo $post_slug=$post->post_name; ?>').click(function () {
+                                jQuery('#myModal-<?php echo $post_slug=$post->post_name; ?>').css('display', 'none');
+                            });
                         }
                     }
                 </script>
