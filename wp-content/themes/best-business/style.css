@@ -4610,6 +4610,11 @@ div.wpcf7 {
     overflow: scroll;
 }
 
+@media only screen and (max-width: 580px) {
+    .modal-content {width: 95%;height: 90%;top: 30px;}
+    .close {right: 10px;top: 0px;}
+}
+
 /* The Close Button */
 .close {
     color: #d71925;
@@ -4627,3 +4632,15 @@ div.wpcf7 {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+.contact-right-block {border: 1px solid #ddd;
+    padding: 30px 20px;
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;}
+.contact-right-block h1 {line-height: 25px;}
+.contact-right-block p {margin-bottom: 0px;}
