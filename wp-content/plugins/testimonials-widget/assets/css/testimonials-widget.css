@@ -2,18 +2,18 @@
 }
 
 .testimonials-widget-testimonial {
-	min-height: 280px;
+	min-height: 320px;
 }
 
 @media only screen and (max-width:786px) {
 	.testimonials-widget-testimonial {
-		min-height: 320px;
+		min-height: 360px;
 	}
 }
 
 @media only screen and (max-width:580px) {
 	.testimonials-widget-testimonial {
-		min-height: 500px;
+		min-height: 550px;
 	}
 }
 

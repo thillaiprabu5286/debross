@@ -2201,6 +2201,8 @@ div#mob-menu-quick,
 
 #main-nav {
     background: #313131;
+    width: 100%;
+    z-index: 90;
 }
 
 .main-navigation ul {
@@ -2776,7 +2778,7 @@ h1.entry-title {
 
 .reveal-off {display: none}
 
-.innerpages-services-box {border: 1px solid #ddd;border-top:0;padding: 20px;margin-bottom: 20px;}
+.innerpages-services-box {border: 1px solid #ddd;border-top:0;padding: 20px;margin-bottom: 20px;overflow:hidden;}
 .innerpages-services-box .collapse-icon {float: right;margin-top: -20px;}
 
 .innerpages-services-image {max-height: 300px;overflow: hidden;}
