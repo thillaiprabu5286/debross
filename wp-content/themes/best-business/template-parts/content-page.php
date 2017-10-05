@@ -10,15 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-	/**
-	 * Hook - best_business_single_image.
-	 *
-	 * @hooked best_business_add_image_in_single_display - 10
-	 */
-	do_action( 'best_business_single_image' );
-	?>
-
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

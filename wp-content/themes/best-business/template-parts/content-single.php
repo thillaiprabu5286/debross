@@ -10,7 +10,7 @@
 ?>
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-9">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <h1><?php the_title(); ?></h1>
 	<?php
@@ -19,7 +19,7 @@
 	 *
 	 * @hooked best_business_add_image_in_single_display - 10
 	 */
-	do_action( 'best_business_single_image' );
+	// do_action( 'best_business_single_image' );
 	?>
 	<header class="entry-header">
 		<div class="entry-meta">
@@ -44,9 +44,9 @@
 </article><!-- #post-## -->
 </div>
 
-<div class="col-sm-4 sidebar-category-list">
+<div class="col-sm-3 sidebar-category-list">
 
-    <h3 class="title">Other Category Post</h3>
+    <h3 class="title">Other Post</h3>
     <span class="divider-left"></span>
     <?php
     // the query

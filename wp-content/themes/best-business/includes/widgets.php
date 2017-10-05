@@ -953,6 +953,8 @@ if ( ! class_exists( 'Best_Business_Latest_News_Widget' ) ) :
 
 						<?php endwhile; ?>
 
+                        <a class="button custom-button button-primary pull-right" href="<?php echo get_site_url() . '/category/latest-events/' ?>" style="text-align: center;">View All Posts</a>
+
 					</div><!-- .inner-wrapper -->
 				</div><!-- .latest-news-widget -->
 

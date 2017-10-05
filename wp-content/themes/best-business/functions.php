@@ -330,7 +330,11 @@ function my_rem_editor_from_post_type() {
  * @author WPSnacks.com
  * @link http://www.wpsnacks.com
  */
-function url_shortcode() {
-    return get_bloginfo('site-url');
+function theme_url_shortcode( $attrs = array (), $content = '' ) {
+
+    $siteUrl = ( is_child_theme() ? get_stylesheet_directory_uri() : get_template_directory_uri() );
+
+    return $siteUrl;
+
 }
-add_shortcode('site-url','url_shortcode');
+add_shortcode('site-url', 'theme_url_shortcode' );

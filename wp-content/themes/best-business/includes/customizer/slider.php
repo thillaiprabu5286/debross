@@ -80,7 +80,7 @@ $wp_customize->add_control( 'theme_options[featured_slider_number]',
 	'type'            => 'number',
 	'priority'        => 100,
 	'active_callback' => 'best_business_is_featured_slider_active',
-	'input_attrs'     => array( 'min' => 1, 'max' => 5, 'step' => 1, 'style' => 'width: 55px;' ),
+	'input_attrs'     => array( 'min' => 1, 'max' => 8, 'step' => 1, 'style' => 'width: 55px;' ),
 	)
 );
 

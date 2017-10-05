@@ -2422,6 +2422,9 @@ div#mob-menu-quick,
 #main-slider a,
 #main-slider h3 {
     color: #ffffff;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 #main-slider p {
@@ -2753,7 +2756,7 @@ h1.entry-title {
     clear: both;
     color: rgb(49, 49, 49);
     font-size: 14px;
-    padding: 15px 0;
+    padding-top: 15px;
     text-align: center;
 }
 
@@ -2994,6 +2997,16 @@ div.wpcf7 {
     padding: 60px 0;
     margin-top: 0;
 }
+
+
+/*===========================================================
+*********************** Footer Bottom Links  *****************
+===========================================================*/
+
+.footer-bottom-links {background-color: #efefef;font-size: 12px;padding-bottom: 15px;}
+.footer-bottom-links a {padding-right: 10px;padding-left: 10px;border-right: 1px solid #666;}
+.footer-bottom-links a:last-of-type {border-right: 0px;}
+
 
 
 /*===========================================================
@@ -4579,7 +4592,6 @@ div.wpcf7 {
     letter-spacing: 1px;}
 
 .latest-news-summary {
-    height: 80px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

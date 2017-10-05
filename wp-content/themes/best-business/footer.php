@@ -54,5 +54,15 @@
 ?>
 
 <?php wp_footer(); ?>
+
+<div class="footer-bottom-links">
+<div class="container">
+    <div class="text-center">
+        <a href="<?php get_template_directory() ?>/terms">Terms</a>
+        <a href="<?php get_template_directory() ?>/privacy">Privacy Policy</a>
+    </div>
+</div>
+</div>
+
 </body>
 </html>
