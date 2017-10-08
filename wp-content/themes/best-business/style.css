@@ -1788,6 +1788,9 @@ object {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.contact-collapse {display: none !important;}
+
 .cart-section {
     float: right;
     position: relative;
@@ -3039,6 +3042,7 @@ div.wpcf7 {
     z-index: 9;
     box-shadow: 0px 0px 32px 0px rgba(122,122,122,0.1);
     background: #fff;
+    min-height: 343px;
 }
 
 .services-layout-1.best_business_widget_services .service-block-inner:hover {
@@ -4120,8 +4124,13 @@ div.wpcf7 {
     }
 }
 
+@media only screen and (max-width: 960px) {
+    #quick-contact {float: none;width: 500px;margin: 0 auto;}
+    #masthead {padding-bottom: 0px;}
+}
+
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width:767px) {
+@media only screen and (max-width:768px) {
     #tophead {
         text-align: center;
 
@@ -4132,10 +4141,34 @@ div.wpcf7 {
     .custom-header-wrapper .page-title {
         font-size: 21px;
     }
-    #quick-contact {
+    .site-branding {
+        margin-bottom: 0px;
         float: left;
+        width: 40% !important;
+        clear: none;
+        overflow: hidden;
+    }
+    #masthead .right-head {
+        clear: none;
+        float: right;
+        margin: 10px 0 0;
+        width: 40%;
+        position: relative;
+    }
+    .contact-collapse {display: block !important;}
+    #quick-contact {
         margin-top: 0;
-        width: 70%;
+        width: 220px;
+        margin-left: -60px;
+        position: absolute;
+        top: 36px;
+        right: 6px;
+        z-index: 999;
+        background-color: #fff;
+        overflow: hidden;
+        padding: 5px 15px;
+        box-shadow: 0px 2px 5px #aaa;
+        display: none;
     }
     #quick-contact li:first-child, #quick-contact li {
         margin: 0;
@@ -4429,11 +4462,6 @@ div.wpcf7 {
     .sidr-quick-open #mobile-trigger-quick {
         padding-right: 220px;
     }
-    .site-branding {
-        float: none;
-        text-align: center;
-        margin: 0 auto 30px;
-    }
 
     .featured-page-widget {
         clear: both;
@@ -4464,11 +4492,6 @@ div.wpcf7 {
         text-align: center;
         width: 100%;
         margin-bottom: 5px;
-    }
-    .site-branding {
-        float: none;
-        max-width: 100%;
-        text-align: center;
     }
 
     #main-slider .cycle-pager {
@@ -4533,15 +4556,6 @@ div.wpcf7 {
 
     .right-head {
         float: inherit;
-    }
-
-    #masthead .right-head {
-        border-top: 1px solid #dddddd;
-        clear: both;
-        float: left;
-        margin: 10px 0 0;
-        padding: 23px 0 10px;
-        width: 100%;
     }
 
     #header-social li {
@@ -4627,6 +4641,7 @@ div.wpcf7 {
 @media only screen and (max-width: 580px) {
     .modal-content {width: 95%;height: 90%;top: 30px;}
     .close {right: 10px;top: 0px;}
+    .custom-logo-link img {width: 100px;}
 }
 
 /* The Close Button */

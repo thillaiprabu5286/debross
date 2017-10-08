@@ -302,6 +302,8 @@ if ( ! function_exists( 'best_business_render_quick_contact' ) ) :
 		$contact_address_title = best_business_get_option( 'contact_address_title' );
 		$contact_address       = best_business_get_option( 'contact_address' );
 		?>
+
+        <a class="button custom-button button-primary pull-right contact-collapse">Contact <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
 		<div id="quick-contact">
 			<ul class="quick-contact-list">
 				<?php if ( ! empty( $contact_number ) ) : ?>

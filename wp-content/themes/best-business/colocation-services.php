@@ -27,7 +27,6 @@ $the_query = new WP_Query(array(
 global $post;
 ?>
 <script src="<?php echo get_template_directory_uri() . '/js/jquery-1.12.4.js'; ?>"></script>
-<!--<script src="<?php // echo get_template_directory_uri() . '/js/jquery-ui.js'; ?>"></script>-->
 <script>
     $(function () {
         $("#tabs").tabs();
@@ -70,21 +69,8 @@ global $post;
 
                 <div id="<?php echo $post_slug=$post->post_name; ?>">
                     <div class="row">
-                        <div class="col-md-4 col-sm-12 detail-left">
-                            <?php
-                            $custom_fields = get_post_custom($post->ID);
-                            $i = 0;
-                            foreach ($custom_fields as $field_key => $field_values) {
-                                if ($i == 8) break;
-                                if (!isset($field_values[0])) continue;
-                                if (in_array($field_key, array("Big Title", "Specs", "Price", "_edit_lock", "_edit_last", "_thumbnail_id"))) continue;
-                                echo "<h5>$field_key:</h5> <pre>$field_values[0]</pre>";
-                                $i++;
-                            }
-                            ?>
-                        </div>
 
-                        <div class="col-md-8 col-sm-12 detail-right">
+                        <div class="col-md-7 col-sm-12 detail-right">
                             <h2><?php echo get_post_meta($post->ID, "Big Title", true); ?></h2>
                             <?php echo get_the_post_thumbnail($page->ID); ?>
                             <ul class="list-inline specs">
@@ -98,7 +84,7 @@ global $post;
                             </ul>
                             <div class="package-price">
                                 <h3>
-                                    <small>From:</small> AED <?php echo get_post_meta($post->ID, "Price", true); ?> P/m
+                                    <small>From:</small> USD <?php echo get_post_meta($post->ID, "Price", true); ?> P/m
                                 </h3>
                             </div>
                             <button class="btn btn-lg btn-default" id="myBtn-<?php echo $post_slug=$post->post_name; ?>">Get Started With
@@ -110,6 +96,20 @@ global $post;
                                 to
                                 Get More Details
                             </button>
+                        </div>
+
+                        <div class="col-md-5 col-sm-12 detail-left">
+                            <?php
+                            $custom_fields = get_post_custom($post->ID);
+                            $i = 0;
+                            foreach ($custom_fields as $field_key => $field_values) {
+                                if ($i == 8) break;
+                                if (!isset($field_values[0])) continue;
+                                if (in_array($field_key, array("Big Title", "Specs", "Price", "_edit_lock", "_edit_last", "_thumbnail_id"))) continue;
+                                echo "<h5>$field_key:</h5> <pre>$field_values[0]</pre>";
+                                $i++;
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
